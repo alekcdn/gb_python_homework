@@ -6,7 +6,7 @@
 
 import random
 n = int(input('Введите число элементов : '))
-lst = [round(random.uniform(0, 100), 2) for lst in range(n)]
+lst = [round(random.uniform(0, 100), 2) for i in range(n)]
 
 lst2 = [round(i - int(i), 2) for i in lst]
 print(f'{lst} => {round(max(lst2) - min(lst2), 2)}')
