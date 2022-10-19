@@ -19,7 +19,7 @@ def create_data():
             1, 30), month=random.randint(1, 12), year=random.randint(1940, 2010)))
         phone1.append(random.randint(79010000001, 79999999999))
         phone2.append(random.randint(74950000001, 74999999999))
-    return (id, name, birthdate, phone1, phone2)
+    return id, name, birthdate, phone1, phone2
 
 
 def save_data():
@@ -32,10 +32,12 @@ def save_data():
     with open('gb_python_homework/phonebook/phonebook.csv', 'w') as file:
         file.write('ID Name  Birthdate  MobilePhone  HomePhone'+"\n")
         for i in id:
-            file.writelines(str(id[i])+" "+name[i]+" "+str(birthdate[i])+" "+str(phone1[i])+" "+str(phone2[i])+"\n")
+            file.writelines(str(id[i])+" "+name[i]+" "+str(birthdate[i]) +
+                            " "+str(phone1[i])+" "+str(phone2[i])+"\n")
 
-def get_data():      
+
+def get_data():
     with open('gb_python_homework/phonebook/phonebook.csv', "r") as file1:
         for line in file1:
             # print('ID Name  Birthdate  MobilePhone  HomePhone')
-            print(line.strip())         
+            print(line.strip())

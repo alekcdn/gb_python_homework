@@ -2,9 +2,10 @@ import function
 import view
 import UI
 
+
 def start():
     button = UI.menu()
-    if button ==1:
+    if button == 1:
         view.show(function.create_data())
         start()
     elif button == 2:
@@ -16,6 +17,3 @@ def start():
     else:
         print('Выберите цифру меню')
         start()
-        
-        
-        
